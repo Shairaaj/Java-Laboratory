@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Customer {
     String customerName;
     BankAccount customerAccount;
-    Customer(String name, BankAccount ba){
+    public Customer(String name, BankAccount ba){
         this.customerName = name;
         this.customerAccount = ba;
     }
-    void performTransactions(double amount){
+    public void performTransactions(double amount){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 to Deposit\nEnter 2 to Withdraw");
         int type = sc.nextInt();

@@ -1,5 +1,4 @@
 package Bank;
-
 public class BankAccount {
     private String bankHolder;
     private double balance;
@@ -7,12 +6,12 @@ public class BankAccount {
         this.bankHolder = "";
         this.balance = 0.0d;
     }
-    public double getBalance(){
-        return this.balance;
-    }
     public BankAccount(String name, double amount){
         this.bankHolder = name;
         this.balance = amount;
+    }
+    public double getBalance(){
+        return this.balance;
     }
     public void showAccInfo(){
         System.out.println("The account holder's name: "+bankHolder+"\n"+"The balance in the account: "+balance);
