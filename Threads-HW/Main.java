@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 class Main{
     public static void main(String[] args) {
-        int n = 15;
+        int n = 30;
         FactorialFinder fa = new FactorialFinder(n);
         FibonacciFinder fb = new FibonacciFinder(n);
         fa.start();
@@ -31,6 +31,7 @@ class FibonacciFinder extends Thread{
     }
     public void run(){
         int i = 0, a = 0, b = 1, next = 0;
+        System.out.print(a+" ");
         while(i < n){
             i++;
             next = a+b;
