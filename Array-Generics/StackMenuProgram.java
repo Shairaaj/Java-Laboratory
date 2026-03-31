@@ -4,14 +4,14 @@ public class StackMenuProgram {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Stack<String> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();
 
         int choice;
         int maxSize = 0;
         boolean created = false;
 
         while (true) {
-            System.out.println("\nEnter the options to proceed!");
+            System.out.println("\n------ STACK MENU ------");
             System.out.println("1 -> Create Stack");
             System.out.println("2 -> Insert (Push)");
             System.out.println("3 -> getLength()");
@@ -32,7 +32,7 @@ public class StackMenuProgram {
 
                     System.out.println("Enter " + maxSize + " elements:");
                     for (int i = 0; i < maxSize; i++) {
-                        stack.push(sc.next());
+                        stack.push(sc.nextInt());
                     }
 
                     created = true;
@@ -51,7 +51,7 @@ public class StackMenuProgram {
                     }
 
                     System.out.print("Enter element to push: ");
-                    stack.push(sc.next());
+                    stack.push(sc.nextInt());
                     System.out.println("Element inserted successfully.");
                     break;
 
@@ -76,9 +76,9 @@ public class StackMenuProgram {
                     }
 
                     System.out.print("Enter element to delete: ");
-                    String del = sc.next();
+                    int del = sc.nextInt();
 
-                    if (stack.remove(del)) {
+                    if (stack.remove(Integer.valueOf(del))) {
                         System.out.println("Element deleted successfully.");
                     } else {
                         System.out.println("Element not found in stack.");
